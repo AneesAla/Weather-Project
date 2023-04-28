@@ -10,12 +10,6 @@ s.listen(5)
 while True:
     clientsocket, address = s.accept()
     print(f"Connection from {address} has been established!")
-    clientsocket.send(
-        bytes(
-            "Welcome Weather/Event App By Anees Alawmleh!\nThis app allows you to find the weather for a city of your choice!",
-            "utf-8",
-        )
-    )
 
     message = clientsocket.recv(1024)
     location = message.decode("utf-8")
