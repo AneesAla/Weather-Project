@@ -26,19 +26,25 @@ def listen_for_messages():
         header_label.pack()
 
         temp_label = customtkinter.CTkLabel(
-            weather_window, text=f"Temperature: {weather_data['temp']} F"
+            weather_window, text=f"Temperature: {weather_data['temp']}°F"
         )
         temp_label.pack()
         feels_like_label = customtkinter.CTkLabel(
-            weather_window, text=f"Feels Like: {weather_data['feels_like']}"
+            weather_window, text=f"Feels Like: {weather_data['feels_like']}°F"
         )
         feels_like_label.pack()
-        sea_level_label = customtkinter.CTkLabel(
-            weather_window, text=f"Sea Level: {weather_data['sea_level']}"
+        minimum_label = customtkinter.CTkLabel(
+             weather_window, text=f"Today's Minimum Recorded: {weather_data['temp_min']}°F"
         )
-        sea_level_label.pack()
+        minimum_label.pack()
+
+        maximum_label = customtkinter.CTkLabel(
+            weather_window, text=f"Today's Maximum Recorded: {weather_data['temp_max']}°F"
+        )
+        maximum_label.pack()
+
         humidity_label = customtkinter.CTkLabel(
-            weather_window, text=f"Humidity: {weather_data['humidity']}"
+            weather_window, text=f"Humidity: {weather_data['humidity']}%"
         )
         humidity_label.pack()
 
