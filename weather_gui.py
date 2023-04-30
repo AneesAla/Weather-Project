@@ -48,6 +48,11 @@ def listen_for_messages():
         )
         humidity_label.pack()
 
+        pressure_label = customtkinter.CTkLabel(
+            weather_window, text=f"Atmospheric Pressure: {weather_data['pressure']}hPA"
+        )
+        pressure_label.pack()
+
         weather_window.after(100, weather_window.lift)
         weather_window.after(200, weather_window.focus)
 
